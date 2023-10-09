@@ -4,10 +4,9 @@ import 'package:rick_and_morty/feature/data/models/person_models.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class PersonLocalDataSource {
-  /// Gets the cashed [List<PersonModel>] wich was gotten the last time.
+  /// Gets the cached [List<PersonModel>] wich was gotten the last time.
   /// the user had an internet connection.
-  ///
-  /// Throws [CashException] if no cashed data is present.
+  /// Throws [CacheException] if no cached data is present.
 
   Future<List<PersonModel>> getLastPersonFromCache();
   Future<void> personsToCache(List<PersonModel> persons);
